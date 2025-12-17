@@ -20,30 +20,35 @@ El trabajo fue realizado poniendo en práctica el uso de:
 
 La base de datos está compuesta por las siguientes tablas principales:
 
-### 🐾 mascotas
-
-- `id` (PK)
-- `nombre`
-- `especie`
-- `dueno_id` (FK)
-
 ### 👤 duenos
 
 - `id` (PK)
 - `nombre`
 - `apellido`
+- `telefono`
+- `direccion`
+
+### 🐾 mascotas
+
+- `id` (PK)
+- `nombre`
+- `especie`
+- `fecha_nacimiento`
+- `id_dueno` (FK)
 
 ### 👨‍⚕️ veterinarios
 
 - `id` (PK)
 - `nombre`
 - `apellido`
+- `matricula`
+- `especialidad`
 
 ### 📋 historial_clinico
 
 - `id` (PK)
-- `mascota_id` (FK)
-- `veterinario_id` (FK)
+- `id_mascota` (FK)
+- `id_veterinario` (FK)
 - `fecha_registro`
 - `descripcion`
 
